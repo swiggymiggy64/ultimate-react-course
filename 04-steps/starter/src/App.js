@@ -63,5 +63,3 @@ function Steps() {
     </div>
   );
 }
-
-// * 013 CHALLENGE #1 Date Counter (v1)

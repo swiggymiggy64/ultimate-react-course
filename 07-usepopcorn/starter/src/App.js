@@ -51,6 +51,17 @@ const tempWatchedData = [
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
+function Test() {
+  const [movieRating, setMovieRating] = useState(0);
+
+  return (
+    <div>
+      <StarRating color="blue" maxRating={10} onSetRating={setMovieRating} />
+      <p>This movie was rated {movieRating} stars</p>
+    </div>
+  );
+}
+
 export default function App() {
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
@@ -63,7 +74,12 @@ export default function App() {
       </NavBar>
 
       <Main>
-        <StarRating maxRating={5} />
+        <StarRating
+          maxRating={5}
+          messages={["Terrible", "Bad", "Ok", "Good", "Amazing"]}
+        />
+        <StarRating size={24} color="red" className="test" defaultRating={3} />
+        <Test />
         <Box>
           <MovieList movies={movies} />
         </Box>

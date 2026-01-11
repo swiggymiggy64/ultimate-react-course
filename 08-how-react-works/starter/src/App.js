@@ -99,4 +99,4 @@ function DifferentContent() {
   );
 }
 
-//* 003 Components, Instances, and Elements
+//* 008 How Diffing Works
